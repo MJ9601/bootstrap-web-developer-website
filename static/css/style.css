@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body::before{
+    content: "";
+    height: 60px;
+    display: block;
+}
+:root{
+    --pramiry:#0d6efd;
+    --secondary :#888;
+}
+html{
+    font-family: Poppins, sans-serif;
+}
+.box-shadow{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+}
+.branding-container{
+    background-image: url("../images/kaboompics_A\ woman\ works\ at\ a\ desk\ with\ a\ laptop\ and\ a\ cup\ of\ coffee.jpg");
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+.branding-container::before{
+    content: "";
+    position: absolute;
+    width: 100%; height: 100%;
+    left: 0; top: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: -1;
+}
+.leading-text{
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: Poppins ;
+}
+.leading-container{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.serviceIcons{
+    font-size: 1.5rem;
+    padding: 16px;
+    background-color: var(--pramiry) ;
+    color: #fff;
+}
+.costumeCard::after{
+    position: absolute;
+    width: 100%;height: 100%;
+    content: "";
+    top: -100%; left: 0;
+    opacity: 0;
+    background-color: var(--pramiry);
+    border-radius: 3px;
+    transition: all .4s ease-in-out;  
+}
+.costumeCard{
+    overflow-y: hidden;
+    border: none;
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+
+
+.costumeCard:hover:after{
+    top: 0%;
+    opacity: 1;
+    z-index: -1;
+}
+.costumeCard:hover{
+    box-shadow: none;
+    transform: translateY(5px);
+ 
+}
+.paragraph-text{
+    color: var(--secondary);
+}
+.costumeCard:hover .serviceIcons{
+    background-color: #fff;
+    color: var(--pramiry);
+}
+
+.costumeCard:hover h1,
+.costumeCard:hover .paragraph-text{
+    color: #fff;
+}
+
+.imgProject{
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.project-container{
+    position: relative;
+    border-radius: 3px;
+    overflow-y: hidden;
+}
+.project-container::before{
+    content: "";
+    border-radius: 3px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: -100%; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+.project-container:hover::before{
+    bottom: 0;
+    opacity: 1;
+}
+.text-project-container{
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: initial;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+.project-container:hover .text-project-container{
+    opacity: 1;
+}
+
+/* general class */
+.custome-card-effect{
+    position: relative;
+    border: none;
+    transition: all .4s ease-in-out;
+}
+.custome-card-effect:hover{
+    transform: translateY(3px);
+    box-shadow: none;
+}
+.upperCase{
+    text-transform: uppercase;
+}
+.CapText{
+    text-transform: capitalize;
+}
+.border-none{
+    border: none;
+}
+.mediaIcon{
+    font-size: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color:var(--pramiry);
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+.mediaIcon:hover{
+    transform: scale(1.2);
+}
+.custome-img{
+    border-radius: 4px;
+}
+#Message{
+    min-height: 6rem;
+}
+
+
+
+@media (max-width:992px) {
+    .leading-text{
+        font-size: 2rem;
+    }
+}
