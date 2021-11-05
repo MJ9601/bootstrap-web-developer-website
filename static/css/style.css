@@ -176,7 +176,9 @@ footer{
 .signInIcon{
     font-size: 1.1rem;
 }
-
+.curserPointer{
+    cursor: pointer;
+}
 
 @media (max-width:992px) {
     .leading-text{
